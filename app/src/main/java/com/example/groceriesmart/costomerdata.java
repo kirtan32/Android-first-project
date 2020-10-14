@@ -49,16 +49,82 @@ public class costomerdata extends AppCompatActivity
         strcity=city.getText().toString();
         strstate=state.getText().toString();
 
-
-        Intent intentnext = new Intent(costomerdata.this,generatepdf.class);
-        intentnext.putExtra("name",strname);
-        intentnext.putExtra("email",stremail);
-        intentnext.putExtra("contact",strcontact);
-        intentnext.putExtra("address",straddress);
-        intentnext.putExtra("city",strcity);
-        intentnext.putExtra("state",strstate);
-        intentnext.putExtra("total",numstr);
-        startActivity(intentnext);
+if(strname.equals("") || stremail.equals("") || strcontact.equals("") || straddress.equals("") || strcity.equals("") || strstate.equals(""))
+        {
+            if(strname.equals(""))
+            {
+                name.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                name.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            if(stremail.equals(""))
+            {
+                email.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                email.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            if(strcontact.equals(""))
+            {
+                contact.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                contact.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            if(straddress.equals(""))
+            {
+                address.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                address.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            if(strcity.equals(""))
+            {
+                city.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                city.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            if(strstate.equals(""))
+            {
+                state.getBackground().setColorFilter(getResources().getColor(R.color.Redcol),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            else
+            {
+                state.getBackground().setColorFilter(getResources().getColor(R.color.black_overlay),
+                        PorterDuff.Mode.SRC_ATOP);
+            }
+            Toast.makeText(getApplicationContext(), "Please Enter Valid Entry", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Intent intentnext = new Intent(costomerdata.this,generatepdf.class);
+            intentnext.putExtra("name",strname);
+            intentnext.putExtra("email",stremail);
+            intentnext.putExtra("contact",strcontact);
+            intentnext.putExtra("address",straddress);
+            intentnext.putExtra("city",strcity);
+            intentnext.putExtra("state",strstate);
+            intentnext.putExtra("total",numstr);
+            startActivity(intentnext);
+        }
 
     }
 }

@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vegitableact">
+
+    <LinearLayout
+        android:id="@+id/toplayoutveg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/Bluecol"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/backveg"
+            android:layout_width="46dp"
+            android:layout_height="38dp"
+            android:src="@drawable/arrow"
+            android:layout_marginTop="13dp"
+            android:onClick="GetBack"
+            >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="51dp"
+            android:src="@drawable/grocery2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="GMart"
+            android:textColor="#FFC107"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="81dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/trolley"
+            android:onClick="CheckCart">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/headindveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegetables"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/addtocartveg"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:background="#ff196d"
+        android:text="Add to Cart"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <ScrollView
+        android:id="@+id/scrollveg"
+        android:layout_width="318dp"
+        android:layout_height="479dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824">
+
+        <GridLayout
+            android:id="@+id/gridveg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:columnOrderPreserved="false">
+
+            <LinearLayout
+                android:id="@+id/layout1veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay1imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay1textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Bell Pepper"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay1priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay1checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        >
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay1spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay2imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay2textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Broccoli"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay2priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$2.8"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay2checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay2spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay3imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable3">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay3textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Carrot"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay3priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay3checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay3spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay4imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable4">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay4textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="celery"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay4priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$1.11"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay4checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay4spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay5imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable5">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay5textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Chili Pepper"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay5priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$1.5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay5checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay5spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay6imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable6">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay6textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="EggPlant"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay6priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay6checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay6spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout7veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay7imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable7">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay7textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Onion"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay7priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$2.2"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay7checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay7spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout8veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay8imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable8">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay8textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Corn"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay8priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$2"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay8checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay8spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout9veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay9imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable9">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay9textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Potato"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay9priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$2"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay9checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay9spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout10veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay10imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable10">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay10textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Pumpkin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay10priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay10checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay10spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout11veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay11imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable11">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay11textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Radish"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay11priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay11checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay11spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout12veg"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffe5ee"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay12imgveg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/vegitable12">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay12textveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Tomato"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay12priceveg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$4"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay12checkveg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay12spinveg"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#ff669d"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

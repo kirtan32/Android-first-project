@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#e5f9ff</color>
+    <color name="colorAccent2">#FF4081</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+    <color name="black_overlay">#121212</color>
+    <color name="tictocbackground">#04364A</color>
+    <color name="Redcol">#ff0343</color>
+    <color name="Bluecol">#461a9b</color>
+    <color name="lightblue">#99eaff</color>
+    <color name="fruit">#e5f9ff</color>
+    <color name="vegitable">#ffe5ee</color>
+    <color name="milk">#ccffef</color>
+    <color name="snack">#ffeacc</color>
+    <color name="cartback">#dbc5f9</color>
+    <color name="Orangelite">#ffece5</color>
+    <color name="bluelight">#73bde5</color>
+    <color name="bluelight2">#e5f9ff</color>
+</resources>

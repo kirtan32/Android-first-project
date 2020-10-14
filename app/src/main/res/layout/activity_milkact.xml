@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".milkact">
+
+    <LinearLayout
+        android:id="@+id/toplayoutmilk"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/Bluecol"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/backmilk"
+            android:layout_width="46dp"
+            android:layout_height="38dp"
+            android:src="@drawable/arrow"
+            android:layout_marginTop="13dp"
+            android:onClick="GetBack"
+            >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="51dp"
+            android:src="@drawable/grocery2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="GMart"
+            android:textColor="#FFC107"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="81dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/trolley"
+            android:onClick="CheckCart">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/headindmilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milk products"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/addtocartmilk"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:background="#19ffba"
+        android:text="Add to Cart"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <ScrollView
+        android:id="@+id/scrollmilk"
+        android:layout_width="318dp"
+        android:layout_height="479dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824">
+
+        <GridLayout
+            android:id="@+id/gridmilk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:columnOrderPreserved="false">
+
+            <LinearLayout
+                android:id="@+id/layout1milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay1imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay1textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Cheese"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay1pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.3"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay1checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay1spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay2imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay2textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Choko Creamy"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay2pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.9"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay2checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay2spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay3imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk3">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay3textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Choko Milky"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay3pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay3checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay3spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay4imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk4">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay4textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="ChocolateShake"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay4pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$4.9"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay4checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay4spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay5imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk5">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay5textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="StrawberryShake"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay5pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$4.9"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay5checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay5spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay6imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk6">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay6textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="VanilaShake"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay6pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.9"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay6checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay6spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout7milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay7imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk7">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay7textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Milky Blue"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay7pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay7checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay7spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout8milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay8imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk8">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay8textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Milk(1 L)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay8pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$5.0"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay8checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay8spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout9milk"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#ccffef"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lay9imgmilk"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/milk9">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lay9textmilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Red Jam"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lay9pricemilk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$3.5"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <CheckBox
+                        android:id="@+id/lay9checkmilk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp">
+
+                    </CheckBox>
+
+                    <Spinner
+                        android:id="@+id/lay9spinmilkl"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#32ffc2"
+                        android:entries="@array/numbersofproduct"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

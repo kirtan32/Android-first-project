@@ -30,6 +30,9 @@ public class activity2 extends AppCompatActivity
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_activity2);
 
+        isReadStoragePermissionGranted();
+        isWriteStoragePermissionGranted();
+
         //ActivityCompat.requestPermissions(activity2.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
 
         Animation leftright= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.leftright);
@@ -94,25 +97,16 @@ public class activity2 extends AppCompatActivity
                 }
         );
     }
-    /*
-    private void requestPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(activity2.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            Toast.makeText(activity2.this, "Write External Storage permission allows us to save files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-        } else {
-            ActivityCompat.requestPermissions(activity2.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-        }
-    }
 
-    public  boolean isStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    public  boolean isReadStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
                 System.out.println("Permission is granted");
                 return true;
             } else {
-
                 System.out.println("Permission is revoked");
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 3);
                 return false;
             }
         }
@@ -121,34 +115,25 @@ public class activity2 extends AppCompatActivity
             return true;
         }
     }
-*/
 
+    public  boolean isWriteStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                System.out.println("Permission is granted");
+                return true;
+            } else {
+                System.out.println("Permission is revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            System.out.println("Permission is granted in < 23 version");
+            return true;
+        }
+    }
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        switch (requestCode) {
-//            case 2:
-//                //Log.d(TAG, "External storage2");
-//                if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
-//                    //Log.v(TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
-//                    //resume tasks needing this permission
-//                }else{
-//                    //progress.dismiss();
-//                }
-//                break;
-//
-//            case 3:
-//                //Log.d(TAG, "External storage1");
-//                if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
-//                  //  Log.v(TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
-//                    //resume tasks needing this permission
-//                }else{
-//                   // progress.dismiss();
-//                }
-//                break;
-//        }
-//    }
 
     public void CheckCart(View view)
     {
